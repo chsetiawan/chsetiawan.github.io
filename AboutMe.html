@@ -8,8 +8,13 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif }
 .w3-bar,h1,button {font-family: "Lato", sans-serif}
+
+.fadein{
+  animation:opac 0.8s}
+  @keyframes
+  opac{from{opacity:0} to{opacity:1}}
 
 
 </style>
@@ -71,6 +76,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <br>
 <br>
 <br>
+
+<div class="fadein">
 
 <!-- First Grid -->
 <div class="w3-container">
@@ -164,6 +171,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </li>
   
 </ul>
+
+</li></ul>
 </div>
 
 <br>
@@ -174,7 +183,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
      Skills
    </div>
 
-  <div class="w3-third">
+  <div class="w3-third w3-padding">
     <h3> <i class="fa fa-code"></i>&nbsp;&nbsp;Programming Languages</h3>
 
       <div class="w3-large w3-text-dark-grey" style="display: inline-block; text-align: left; line-height: 30px">
@@ -195,7 +204,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
   </div>
 
-  <div class="w3-third">
+  <div class="w3-third w3-padding">
     <h3> <i class="fa fa-gear fa-spin"></i>&nbsp;&nbsp;Circuit Design Tools/Software</h3>
 
     <div class="w3-large w3-text-dark-grey" style="display: inline-block; text-align: left; line-height: 30px">
@@ -217,7 +226,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
   </div>
 
-  <div class="w3-third">
+  <div class="w3-third w3-padding">
     <h3> <i class="fa fa-laptop"></i>&nbsp;&nbsp;Operating Systems</h3>
 
     <div class="w3-large w3-text-dark-grey" style="display: inline-block; text-align: left; line-height: 30px">
@@ -263,6 +272,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
 </div>
 
+</div>
 <script>
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
