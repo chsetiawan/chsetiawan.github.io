@@ -11,6 +11,16 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Lato", sans-serif}
 
+.fadein{
+  animation:opac 0.8s}
+  @keyframes
+  opac{from{opacity:0} to{opacity:1}}
+
+img {
+    max-width: 100%;
+    max-height: 100vh;
+    height: auto;
+}
 
 </style>
 <body>
@@ -66,33 +76,59 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- First Grid -->
 
-<div class="w3-container">
+<div class="w3-container fadein fade-scroll">
   <div class="w3-center w3-padding w3-xxlarge">
-    Multicolor LED Greek Banner
+    Multicolor LED Greek Letter Banner
   </div>
+</div>
+
+<div class="w3-content fade-scroll">
+  <p class="w3-left w3-large w3-padding fadein">
+    I helped build an LED Greek banner with a group of 14 other engineers.
+    <br>
+    <br>
+    We soldered LED strips together to illuminate the Greek letters from behind the fabric.
+    <br>
+    <br>
+    The LED strips were soldered in separate parallel and series sections to easily debug and replace faulty LED strips.
+    <br>
+    <br>
+    We attached the ends of the power wires to a central power source, which was connected to a Bluetooth remote to control the LED lights and colors.
+    <br>
+    <br>
+    The banner has now been used for almost two years during recruitment week and events to showcase past fraternity engineering projects.
+    <br>
+    <br>
+  </p>
 </div>
 
 <!-- Videos -->
+
 <div class="w3-container">
-  <div class="w3-center w3-row-padding w3-padding-64 w3-container">
-    <div class="w3-content">
-      <video width="280" controls>
-        <source src="Banner1.webm" type="video/webm">
-      </video>
-      &nbsp; &nbsp;
-      <video width="280" controls>
-        <source src="Banner2.webm" type="video/webm">
-      </video>
-      &nbsp; &nbsp;
-      <video width="280" controls>
-        <source src="Banner3.webm" type="video/webm">
-      </video>
-    </div>
-  </div>
+  <h2 class="w3-center fadein fade-scroll">Videos</h2>
+</div>
+
+<div class="w3-center w3-row-padding w3-padding w3-container fadein">
+    <video width="280" controls>
+      <source src="Banner1.webm" type="video/webm">
+    </video>
+    &nbsp; &nbsp;
+    <video width="280" controls>
+      <source src="Banner2.webm" type="video/webm">
+    </video>
+    &nbsp; &nbsp;
+    <video width="280" controls>
+      <source src="Banner3.webm" type="video/webm">
+    </video>
 </div>
 
 <!-- Pictures -->
-<div class ="w3-container w3-center w3-padding-32">
+
+<div class="w3-container">
+  <h2 class="w3-center fadein fade-scroll">Pictures</h2>
+</div>
+
+<div class ="w3-container w3-center w3-padding">
   <img src="Banner1.JPG" alt="Banner1" width="400">
   &nbsp;
   <img src="Banner2.JPG" alt="Banner1" width="400">
@@ -101,6 +137,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 </div>
 
+<br>
+<br>
 
 <!-- Bottom Contact Info -->
 <div class="w3-container w3-dark-gray w3-center">
