@@ -8,8 +8,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif; background-color: whitesmoke;}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif; background-color: ghostwhite;}
 .w3-bar,h1,button {font-family: "Lato", sans-serif}
+
 .centered {
   position: fixed;
   top: 50%;
@@ -18,16 +19,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif; background-color: white
   margin-left: -175px;
 }
 
-
-.center {
-    margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
-}
-
 .fadein{
   animation:opac 0.8s}
+  @keyframes
+  opac{from{opacity:0} to{opacity:1}}
+
+.fadein1{
+  animation-delay: 1s;
+  animation:opac 1.5s}
   @keyframes
   opac{from{opacity:0} to{opacity:1}}
 
@@ -35,17 +34,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif; background-color: white
 <body class="w3-center">
 
 
-
-
 <!-- Header -->
 
-<div class="centered fadein">
-<div class="w3-container whitesmoke w3-center fadein" style="max-width: 500px; padding:30px 8px">
-  <div class="w3-margin w3-xxlarge">
+<div class="centered">
+<div class="w3-container w3-center" style="max-width: 500px; padding:30px 8px">
+  <div class="w3-margin w3-xxlarge fadein">
     Christian Setiawan
   </div>
 
-  <div class="w3-large w3-padding-16">
+  <div class="w3-large w3-padding-16 fadein">
     <a href="mailto:csetiawan@ucdavis.edu" style="text-decoration:none;" class="w3-hover-opacity">
       <i class="fa fa-envelope"></i>
         <b>&nbsp;Email</b>
@@ -63,7 +60,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif; background-color: white
   </div>
 
   <a href="AboutMe.html">
-    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">
+    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top fadein1">
       Welcome!
     </button>
   </a> 

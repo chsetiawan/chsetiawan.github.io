@@ -11,6 +11,11 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Lato", sans-serif}
 
+.fadein{
+  animation:opac 0.8s}
+  @keyframes
+  opac{from{opacity:0} to{opacity:1}}
+
 
 </style>
 <body>
@@ -61,27 +66,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 </div>
 
-<!-- Header -->
-
-<!--
-<header class="w3-container w3-dark-gray w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-xxxlarge"w>Christian Setiawan TEST!!!!</h1>
-
-
-
-    <div class="w3-xlarge w3-padding-32">
-  <a href="mailto:csetiawan@ucdavis.edu">  <i class="fa fa-envelope-o w3-hover-opacity fa-lg"></i></a>
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-  <a href="Christian Setiawan Electrical Engineer Resume.pdf" target="_blank"> <i class=" fa fa-file-pdf-o w3-hover-opacity fa-lg"></i></a>
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-  <a href="https://www.linkedin.com/in/christiansetiawan" target="_blank">  <i class="fa fa-linkedin w3-hover-opacity fa-lg" ></i> </a>
- </div>
--->
-
- <!-- <p class="w3-xlarge">blah</p> -->
- <!-- <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Resume</button> -->
- <!-- </header> -->
-
 <br>
 <br>
 <br>
@@ -91,7 +75,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- First Grid -->
 
-<div class="w3-container">
+<div class="w3-container fadein">
   <div class="w3-center w3-padding w3-xxlarge">
     Current and Past Projects
   </div>
@@ -99,98 +83,27 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- Pictures -->
 
-<div class ="w3-container w3-padding-32">
-  <div class="w3-third w3-center w3-padding">
-            <a href="GreekBanner.html" style="text-decoration:none;" class="w3-hover-opacity"><b>Autonomous Vehicle Senior Design Project</b><br><img src="Banner1.JPG" alt="s&c" width="300"></a>
+<div class ="w3-container w3-padding-32 fadein">
+  <div class="w3-half w3-center w3-padding">
+            <a href="AutonomousVehicle.html" style="text-decoration:none;" class="w3-hover-opacity"><b>Autonomous Vehicle Senior Design Project</b><br><img src="Banner1.JPG" alt="s&c" width="300"></a>
   </div>
 
-  <div class="w3-third w3-center w3-padding">
-            <a href="GreekBanner.html" style="text-decoration:none;" class="w3-hover-opacity">Multicolor LED Greek Letter Banner<br><img src="Banner1.JPG" alt="s&c" width="300"></a>
-  </div>
-
-  <div class="w3-third w3-center w3-padding">
-            <a href="GreekBanner.html" style="text-decoration:none;" class="w3-hover-opacity">Multicolor LED Greek Letter Banner<br><img src="Banner1.JPG" alt="s&c" width="300"></a>
+  <div class="w3-half w3-center w3-padding">
+            <a href="GreekBanner.html" style="text-decoration:none;" class="w3-hover-opacity"> <b>Multicolor LED Greek Letter Banner</b><br><img src="Banner1.JPG" alt="s&c" width="300"></a>
   </div>
 </div>
 
 
-<div class ="w3-container w3-padding-32">
+<div class ="w3-container w3-padding-32 fadein">
   <div class="w3-half w3-center">
-            <a href="GreekBanner.html" style="text-decoration:none;" class="w3-hover-opacity"><b>Autonomous Vehicle Senior Design Project</b><br><img src="Banner1.JPG" alt="s&c" width="300"></a>
+            <a href="TrafficController.html" style="text-decoration:none;" class="w3-hover-opacity"><b>Verilog FPGA Traffic Controller</b><br><img src="Banner1.JPG" alt="s&c" width="300"></a>
   </div>
 
   <div class="w3-half w3-center">
-            <a href="GreekBanner.html" style="text-decoration:none;" class="w3-hover-opacity">Multicolor LED Greek Letter Banner<br><img src="Banner1.JPG" alt="s&c" width="300"></a>
+            <a href="MATLAB_Player.html" style="text-decoration:none;" class="w3-hover-opacity"><b>MATLAB Video Processing Player</b><br><img src="Banner1.JPG" alt="s&c" width="300"></a>
   </div>
 
 </div>
-
-<!--
-<div class ="w3-container">
-  <div class="centeredLeft">
-    <div class ="w3-container w3-padding-32">
-            <a href="GreekBanner.html" style="text-decoration:none;" class="w3-hover-opacity"><b>Autonomous Vehicle Senior Design Project</b><br><img src="Banner1.JPG" alt="s&c" width="350"></a>
-    </div>
-  </div>
-
-  <div class="centeredRight">
-    <div class ="w3-container w3-padding-32">
-            <a href="GreekBanner.html" style="text-decoration:none;" class="w3-hover-opacity">Multicolor LED Greek Letter Banner<br><img src="Banner1.JPG" alt="s&c" width="350"></a>
-    </div>
-  </div>
-</div>
--->
-
-<!--
-<div class="grid__item">
-  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="https://brandonluong.tech/assets/images/code.jpg" alt="" width="300"/>
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="https://brandonluong.tech/portfolio/Eparser/" rel="permalink">Eparser
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">Translates a fictional language, E, to compile-ready C code, using Java. Extensive use of EBNF grammar and syntax.
-
-</p>
-  </article>
-</div>
-
-<div class="grid__item">
-  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="https://brandonluong.tech/assets/images/fakeu1.JPG" alt="" width="300"/>
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="https://brandonluong.tech/portfolio/FakeU/" rel="permalink">FakeU
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">University class database implemented in PostgreSQL.
-
-</p>
-  </article>
-</div>
--->
-
-
-
-
-<!--
-<div class ="w3-container w3-padding-32">
-        <a href="GreekBanner.html" style="text-decoration:none;" class="w3-hover-opacity"> Multicolor LED Greek Letter Banner<br><img src="Banner1.JPG" alt="s&c" width="350"></a>
-</div>
--->
 
 <br>
 <br>
@@ -233,6 +146,7 @@ function myFunction() {
     }
 }
 </script>
+
 
 </body>
 </html>
