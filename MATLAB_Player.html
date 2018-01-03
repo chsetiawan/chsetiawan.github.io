@@ -11,6 +11,16 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Lato", sans-serif}
 
+.fadein{
+  animation:opac 0.8s}
+  @keyframes
+  opac{from{opacity:0} to{opacity:1}}
+
+img {
+    max-width: 100%;
+    max-height: 100vh;
+    height: auto;
+}
 
 </style>
 <body>
@@ -67,21 +77,45 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <!-- First Grid -->
 
 <div class="w3-container">
-  <div class="w3-center w3-padding w3-xxlarge">
+  <div class="w3-center w3-padding w3-xxlarge fadein fade-scroll">
     MATLAB Video Processing Player
   </div>
 </div>
 
+<div class="w3-content fade-scroll">
+  <p class="w3-left w3-large w3-padding fadein fade-scroll">
+    I worked with two other classmates to create a fully working MATLAB video processing player that can find and play videos from your computer.
+    <br>
+    <br>
+    We created a working graphical user interface (GUI) and programmed buttons to play, pause, stop, load, rewind, and fast foward the video.
+    <br>
+    <br>
+    We implemented special features including a real-time scroll bar, a scalable RGB histogram, and FPS/Resolution display.
+    <br>
+    <br>
+
+  </p>
+</div>
+
 
 <!-- Pictures -->
-<div class ="w3-container w3-center w3-padding-32">
-  <img src="Banner1.JPG" alt="Banner1" width="400">
-  &nbsp;
-  <img src="Banner2.JPG" alt="Banner1" width="400">
-  &nbsp;
-  <img src="Banner3.JPG" alt="Banner1" width="400">
 
+<div class="w3-container">
+  <h2 class="w3-center fadein fade-scroll">Video Player GUI</h2>
+  <div class ="w3-container w3-center w3-padding fadein fade-scroll">
+    <img src="MATLAB_GUI.png">
+  </div>
 </div>
+
+<div class="w3-container">
+  <h2 class="w3-center fadein fade-scroll">Example Code</h2>
+  <div class ="w3-container w3-center w3-padding fadein fade-scroll">
+    <img src="MATLAB_code.png">
+  </div>
+</div>
+
+<br>
+<br>
 
 
 <!-- Bottom Contact Info -->
@@ -121,6 +155,29 @@ function myFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+            
+            $(function() {
+                
+                var documentEl = $(document),
+                    fadeElem = $('.fade-scroll');
+                
+                documentEl.on('scroll', function() {
+                    var currScrollPos = documentEl.scrollTop();
+                    
+                    fadeElem.each(function() {
+                        var $this = $(this),
+                            elemOffsetTop = $this.offset().top;
+                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/700);
+                    }); 
+                });
+                
+            });
 </script>
 
 </body>

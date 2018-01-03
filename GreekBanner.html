@@ -84,13 +84,10 @@ img {
 
 <div class="w3-content fade-scroll">
   <p class="w3-left w3-large w3-padding fadein">
-    I helped build an LED Greek banner with a group of 14 other engineers.
+    I helped build an LED Greek banner with a group of 14 other engineers where we soldered LED strips together to illuminate the Greek letters from behind the fabric.
     <br>
     <br>
-    We soldered LED strips together to illuminate the Greek letters from behind the fabric.
-    <br>
-    <br>
-    The LED strips were soldered in separate parallel and series sections to easily debug and replace faulty LED strips.
+    The LED strips were divided into sections with section-to-section parallel connections and series connections within the sections in order to easily debug and replace faulty LED strips.
     <br>
     <br>
     We attached the ends of the power wires to a central power source, which was connected to a Bluetooth remote to control the LED lights and colors.
@@ -129,11 +126,9 @@ img {
 </div>
 
 <div class ="w3-container w3-center w3-padding">
-  <img src="Banner1.JPG" alt="Banner1" width="400">
+  <img src="Banner1.JPG" width="400">
   &nbsp;
-  <img src="Banner2.JPG" alt="Banner1" width="400">
-  &nbsp;
-  <img src="Banner3.JPG" alt="Banner1" width="400">
+  <img src="GreekBannerFull.png" width="400">
 
 </div>
 
@@ -177,6 +172,29 @@ function myFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+            
+            $(function() {
+                
+                var documentEl = $(document),
+                    fadeElem = $('.fade-scroll');
+                
+                documentEl.on('scroll', function() {
+                    var currScrollPos = documentEl.scrollTop();
+                    
+                    fadeElem.each(function() {
+                        var $this = $(this),
+                            elemOffsetTop = $this.offset().top;
+                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/700);
+                    }); 
+                });
+                
+            });
 </script>
 
 </body>
