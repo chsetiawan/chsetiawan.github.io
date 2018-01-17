@@ -110,14 +110,14 @@ img {
 <div class="w3-container">
   <h2 class="w3-center fadein fade-scroll">Final Printed Circuit Board</h2>
   <div class="w3-container w3-padding w3-center fadein fade-scroll">
-    <img src="PCBFinal.jpg">
+    <img src="PCBFinal.jpg" width="1000">
   </div>
 </div>
 
 <div class="w3-container">
   <h2 class="w3-center fadein fade-scroll">PCB Design</h2>
   <div class="w3-container w3-padding w3-center fadein fade-scroll">
-    <img src="PCBPicture.png">
+    <img src="PCBPicture.png" width="800">
 </div>
 
 <br>
@@ -125,7 +125,7 @@ img {
 <h2 class="w3-center fadein fade-scroll">Circuit Schematic</h2>
 
 <div class="w3-container w3-padding w3-center fadein fade-scroll">
-  <img src="Schematic.png">
+  <img src="Schematic.png" width="800">
 </div>
 
 <br>
@@ -211,7 +211,7 @@ function myFunction() {
                     fadeElem.each(function() {
                         var $this = $(this),
                             elemOffsetTop = $this.offset().top;
-                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/700);
+                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/1000);
                     }); 
                 });
                 
