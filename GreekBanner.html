@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Greek Banner - Christian Setiawan</title>
+<title>Programmable LED Banner - Christian Setiawan</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -8,9 +8,45 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {font-family: "Lato", sans-serif; background-color:}
-h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-.w3-bar,h1,button {font-family: "Lato", sans-serif}
+body { 
+  background-color: #F8FBFD; font-family: "Lato"}
+h1 {
+  font-family: "Lato", sans-serif; 
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+h2,h3,h4,h5 
+{font-family: "Lato", sans-serif;
+}
+
+p.bio {
+  font-family: "Lato", sans-serif; 
+  font-size: 18px;
+}
+
+p.bio2 {
+  font-family: "Lato", sans-serif; 
+  font-size: 18px;
+  line-height: 32px;
+}
+
+p.bio3 {
+  font-family: "Lato", sans-serif; 
+  font-size: 22px;
+}
+
+p.break {
+ line-height: 50%;
+}
+
+p.big {
+  font-family: "Lato", sans-serif; 
+  font-size: 28px;
+}
+
+.w3-bar,h1,button 
+{font-family: "Lato", sans-serif;
+}
 
 .fadein{
   animation:opac 0.8s}
@@ -18,63 +54,164 @@ h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
   opac{from{opacity:0} to{opacity:1}}
 
 img {
-    max-width: 100%;
-    max-height: 100vh;
-    height: auto;
+  max-width: 100%;
+  max-height: 100vh;
+  height: auto;
 }
+
+.icons {
+  position: relative;
+  font-size: 25px;
+  letter-spacing: 15px;
+
+}
+
+
+
+
+/* Important styles */
+#toggle {
+  display: block;
+  width: 28px;
+  height: 30px;
+  margin: 30px auto 10px;
+}
+
+#toggle span:after,
+#toggle span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9px;
+}
+#toggle span:after{
+  top: 9px;
+}
+#toggle span {
+  position: relative;
+  display: block;
+}
+
+#toggle span,
+#toggle span:after,
+#toggle span:before {
+  width: 100%;
+  height: 5px;
+  background-color: #888;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+/* on activation */
+#toggle.on span {
+  background-color: transparent;
+}
+#toggle.on span:before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#toggle.on span:after {
+  transform: rotate(-45deg) translate(7px, -8px);
+}
+#toggle.on + #menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* menu appearance*/
+#menu {
+  position: relative;
+  color: #999;
+  width: 120px;
+  padding: 10px;
+  margin: auto;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  border-radius: 4px;
+  background: white;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+  /* just for this demo */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s;
+}
+#menu:after {
+  position: absolute;
+  top: -15px;
+  left: 45px;
+  content: "";
+  display: block;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid white;
+}
+ul, li, li a {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+li a {
+  padding: 5px;
+  color: #888;
+  text-decoration: none;
+  transition: all .2s;
+}
+li a:hover,
+li a:focus {
+
+}
+
+
+/* demo styles */
+body { margin-top: 3em; font-family: "Lato"; }
+
+
+
+
+
+
+
 
 </style>
 <body>
 
 <!-- Navbar -->
-
 <div class="w3-top">
-  <div class="w3-bar w3-black w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-gray" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
-      <i class="fa fa-home"></i>&nbsp;&nbsp;Home
-    </a>
-
-    <a href="AboutMe.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">
-      <i class="fa fa-info-circle"></i>&nbsp;&nbsp;About Me
-    </a>
-
-    <a href="Christian Setiawan Electrical Engineer Resume.pdf" target="_blank" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">
-      <i class="fa fa-file-text"></i>&nbsp;&nbsp;Resume
-    </a>
-
-    <a href="Portfolio.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">
-      <i class="fa fa-list-ul"></i>&nbsp;&nbsp;Portfolio
-    </a>
+  <div class="w3-right">
+    <a href="#menu" id="toggle"><span></span></a>
+    <div id="menu">
+      <ul>
+        <li><a href="index.html"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a></li>
+        <li><a href="Christian Setiawan Electrical Engineer Resume.pdf"><i class="fa fa-file-text"></i>&nbsp;&nbsp;Resume</a></li>
+        <li><a href="#Projects"><i class="fa fa-folder-open"></i>&nbsp;&nbsp;Projects</a></li>
+      </ul>
+    </div>
   </div>
+</div>
+
 
   <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">
-      <i class="fa fa-home"></i>&nbsp;&nbsp;Home
-    </a>
-
-    <a href="AboutMe.html" class="w3-bar-item w3-button w3-padding-large">
-      <i class="fa fa-info-circle"></i>&nbsp;&nbsp;About Me
+<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large">
+    <i class="fa fa-home"></i>&nbsp;&nbsp;Home
     </a>
 
     <a href="Christian Setiawan Electrical Engineer Resume.pdf" class="w3-bar-item w3-button w3-padding-large">
       <i class="fa fa-file-text"></i>&nbsp;&nbsp;Resume</a>
 
     <a href="Portfolio.html" class="w3-bar-item w3-button w3-padding-large">
-      <i class="fa fa-list-ul"></i>&nbsp;&nbsp;Portfolio
+      <i class="fa-folder-open"></i>&nbsp;&nbsp;Projects
     </a>
+
   </div>
 </div>
 
 <br>
 <br>
-<br>
-<br>
-<br>
 
 <!-- First Grid -->
+
 
 <div class="w3-container fadein fade-scroll">
   <div class="w3-center w3-padding w3-xxlarge">
@@ -82,7 +219,7 @@ img {
   </div>
 </div>
 
-<div class="w3-content fade-scroll">
+<div class="w3-content fade-scroll" style="max-width:760px">
   <p class="w3-left w3-large w3-padding fadein">
     I helped build a programmable LED banner with a group of 14 other engineers where we soldered LED strips together to illuminate the Greek letters from behind the fabric.
     <br>
@@ -106,15 +243,15 @@ img {
 </div>
 
 <div class="w3-center w3-row-padding w3-padding w3-container fadein">
-    <video width="280" controls>
+    <video width="250" controls>
       <source src="Banner1.webm" type="video/webm">
     </video>
     &nbsp; &nbsp;
-    <video width="280" controls>
+    <video width="250" controls>
       <source src="Banner2.webm" type="video/webm">
     </video>
     &nbsp; &nbsp;
-    <video width="280" controls>
+    <video width="250" controls>
       <source src="Banner3.webm" type="video/webm">
     </video>
 </div>
@@ -135,16 +272,13 @@ img {
 <br>
 <br>
 
-<div class="w3-container w3-center w3-padding">
-  <a href="AutonomousVehicle.html">
-    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top fadein" style="width:125px">
+<div class="w3-container w3-large w3-center w3-padding">
+  <a href="AutonomousVehicle.html" style="text-decoration:none;" class="w3-hover-opacity">
       Previous
-    </button>
   </a>
-  <a href="TrafficController.html">
-    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top fadein" style="width:125px">
+  /
+  <a href="TrafficController.html" style="text-decoration:none;" class="w3-hover-opacity">
       Next
-    </button>
   </a>
 </div>
 
@@ -153,28 +287,13 @@ img {
 
 
 <!-- Bottom Contact Info -->
-<div class="w3-container w3-dark-gray w3-center">
-    <div class="w3-large w3-padding-16">
-        <h1 class="w3-margin w3-xxlarge">Contact Info</h1>
-        <a href="mailto:csetiawan@ucdavis.edu" style="text-decoration:none;" class="w3-hover-opacity">
-          <i class="fa fa-envelope"></i>
-            <b>&nbsp;Email</b>
-        </a>
-        &nbsp;&nbsp;
-        <a href="Christian Setiawan Electrical Engineer Resume.pdf" target="_blank" style="text-decoration:none;" class="w3-hover-opacity">
-          <i class=" fa fa-file-text w3-hover-opacity"></i>
-          <b>&nbsp;Resume</b>
-        </a>
-        &nbsp;&nbsp;
-        <a href="https://www.linkedin.com/in/christiansetiawan" target="_blank" style="text-decoration:none;" class="w3-hover-opacity">
-          <i class="fa fa-linkedin w3-hover-opacity"></i>
-          <b>&nbsp;LinkedIn</b>
-        </a>
+<div class="icons w3-xlarge w3-center w3-container w3-blue-gray w3-padding-32 fadein">
 
-        <br>
-        <br>
-
-    </div>
+  <a href="mailto:csetiawan@ucdavis.edu">  <i class="fa fa-envelope w3-hover-opacity"></i></a>
+  <a href="Christian Setiawan Electrical Engineer Resume.pdf" target="_blank"> <i class=" fa fa-file w3-hover-opacity"></i></a>
+  <a href="https://www.github.com/chsetiawan" target="_blank"> <i class="fa fa-github w3-hover-opacity" ></i></a>
+  <a href="https://www.linkedin.com/in/christiansetiawan" target="_blank">  <i class="fa fa-linkedin w3-hover-opacity"></i> </a>
+  
 </div>
 
 
@@ -191,7 +310,6 @@ function myFunction() {
 }
 </script>
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 <script type="text/javascript">
@@ -207,11 +325,80 @@ function myFunction() {
                     fadeElem.each(function() {
                         var $this = $(this),
                             elemOffsetTop = $this.offset().top;
-                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/700);
+                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/500);
                     }); 
                 });
                 
             });
+</script>
+
+
+<script type="text/javascript">
+            
+            $(function() {
+                
+                var documentEl = $(document),
+                    fadeElem = $('.fade-scroll2');
+                
+                documentEl.on('scroll', function() {
+                    var currScrollPos = documentEl.scrollTop();
+                    
+                    fadeElem.each(function() {
+                        var $this = $(this),
+                            elemOffsetTop = $this.offset().top;
+                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/1200);
+                    }); 
+                });
+                
+            });
+</script>
+
+<script type="text/javascript">
+
+
+var theToggle = document.getElementById('toggle');
+
+// based on Todd Motto functions
+// https://toddmotto.com/labs/reusable-js/
+
+// hasClass
+function hasClass(elem, className) {
+  return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+}
+// addClass
+function addClass(elem, className) {
+    if (!hasClass(elem, className)) {
+      elem.className += ' ' + className;
+    }
+}
+// removeClass
+function removeClass(elem, className) {
+  var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+  if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+            newClass = newClass.replace(' ' + className + ' ', ' ');
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    }
+}
+// toggleClass
+function toggleClass(elem, className) {
+  var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(" " + className + " ") >= 0 ) {
+            newClass = newClass.replace( " " + className + " " , " " );
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    } else {
+        elem.className += ' ' + className;
+    }
+}
+
+theToggle.onclick = function() {
+   toggleClass(this, 'on');
+   return false;
+}
+
 </script>
 
 </body>
