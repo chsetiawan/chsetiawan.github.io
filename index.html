@@ -1,451 +1,368 @@
 <!DOCTYPE html>
-<html>
-<title>Christian Setiawan</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body { 
-  background-color: #F8FBFD; font-family: "Lato"}
-h1 {
-  font-family: "Lato", sans-serif; 
-  font-size: 20px;
-  letter-spacing: 2px;
-}
-h2,h3,h4,h5 
-{font-family: "Lato", sans-serif;
-}
-p.bio {
-  font-family: "Lato", sans-serif; 
-  font-size: 18px;
-}
-p.bio2 {
-  font-family: "Lato", sans-serif; 
-  font-size: 18px;
-  line-height: 32px;
-}
-p.bio3 {
-  font-family: "Lato", sans-serif; 
-  font-size: 22px;
-}
-p.break {
- line-height: 50%;
-}
-p.big {
-  font-family: "Lato", sans-serif; 
-  font-size: 28px;
-}
-.w3-bar,h1,button 
-{font-family: "Lato", sans-serif;
-}
-.fadein{
-  animation:opac 0.8s}
-  @keyframes
-  opac{from{opacity:0} to{opacity:1}}
-img {
-  max-width: 100%;
-  max-height: 100vh;
-  height: auto;
-}
-.icons {
-  position: relative;
-  font-size: 25px;
-  letter-spacing: 10px;
-}
-/* Important styles */
-#toggle {
-  display: block;
-  width: 28px;
-  height: 30px;
-  margin: 30px auto 10px;
-}
-#toggle span:after,
-#toggle span:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -9px;
-}
-#toggle span:after{
-  top: 9px;
-}
-#toggle span {
-  position: relative;
-  display: block;
-}
-#toggle span,
-#toggle span:after,
-#toggle span:before {
-  width: 100%;
-  height: 5px;
-  background-color: #888;
-  transition: all 0.3s;
-  backface-visibility: hidden;
-  border-radius: 2px;
-}
-/* on activation */
-#toggle.on span {
-  background-color: transparent;
-}
-#toggle.on span:before {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-#toggle.on span:after {
-  transform: rotate(-45deg) translate(7px, -8px);
-}
-#toggle.on + #menu {
-  opacity: 1;
-  visibility: visible;
-}
-/* menu appearance*/
-#menu {
-  position: relative;
-  color: #999;
-  width: 120px;
-  padding: 10px;
-  margin: auto;
-  font-family: "Lato", sans-serif;
-  text-align: center;
-  border-radius: 4px;
-  background: white;
-  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
-  /* just for this demo */
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .4s;
-}
-#menu:after {
-  position: absolute;
-  top: -15px;
-  left: 40px;
-  content: "";
-  display: block;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 20px solid white;
-}
-ul, li, li a {
-  list-style: none;
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-li a {
-  padding: 5px;
-  color: #888;
-  text-decoration: none;
-  transition: all .2s;
-}
-li a:hover,
-li a:focus {
-}
-/* demo styles */
-body { margin-top: 3em; font-family: "Lato"; }
-</style>
-<body>
+<html lang="en">
+  <head>
+    <title>Christian Setiawan</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-right">
-    <a href="#menu" id="toggle"><span></span></a>
-    <div id="menu">
-      <ul>
-        <li><a href="index.html"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a></li>
-        <li><a href="Christian Setiawan Electrical Engineer Resume.pdf"><i class="fa fa-file-text"></i>&nbsp;&nbsp;Resume</a></li>
-        <li><a href="#Projects"><i class="fa fa-folder-open"></i>&nbsp;&nbsp;Projects</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-  <!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-  <a href="index.html" class="w3-bar-item w3-button w3-padding-large">
-    <i class="fa fa-home"></i>&nbsp;&nbsp;Home
-    </a>
-
-    <a href="Christian Setiawan Electrical Engineer Resume.pdf" class="w3-bar-item w3-button w3-padding-large">
-      <i class="fa fa-file-text"></i>&nbsp;&nbsp;Resume</a>
-
-    <a href="Portfolio.html" class="w3-bar-item w3-button w3-padding-large">
-      <i class="fa-folder-open"></i>&nbsp;&nbsp;Projects
-    </a>
-
-  </div>
-</div>
-
-
-
-
-<header class="w3-container w3-center fadein fade-scroll" style="padding:100px">
-  <img class ="" src="itme2.png" width="300">
-  <br>
-  <br>
-  <h1 class="w3-margin ">CHRISTIAN SETIAWAN</h1>
-
-  <div class="icons">
-    <a href="mailto:csetiawan@ucdavis.edu">  <i class="fa fa-envelope w3-hover-opacity"></i></a>
-
-    <a href="Christian Setiawan Electrical Engineer Resume.pdf" target="_blank"> <i class=" fa fa-file-text w3-hover-opacity"></i></a>
-
-    <a href="https://www.github.com/chsetiawan" target="_blank"> <i class="fa fa-github w3-hover-opacity" ></i></a>
-
-    <a href="https://www.linkedin.com/in/christiansetiawan" target="_blank">  <i class="fa fa-linkedin w3-hover-opacity"></i> </a>
-  </div>
-
-
- <!-- <p class="w3-xlarge">blah</p> -->
-</header>
-
-
-<!-- Spacing -->
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-  <!-- First Grid -->
-  <div class="w3-content fade-scroll w3-padding fadein" style="max-width: 750px">
-        <p class="big">Hello!</p>
-
-        <p class="bio w3-text-dark-grey">I'm Christian and I’m an electrical engineer located in the <b>San Francisco Bay Area</b>.
-        </p>
-
-        <p class="bio w3-text-dark-grey">
-        I’m currently a senior at the University of California, Davis and am actively seeking full-time job opportunities for when I graduate in June 2018.
-        </p>
-
-        <p class="bio w3-text-dark-grey">
-        I'm interested in hardware engineering, developing applications, and front-end web design.
-        </p>
-        
-        <p class="bio w3-text-dark-grey">
-        I love playing the drums, competing in <a href="http://tagpro.koalabeast.com/" target="_blank" class="w3-hover-opacity" style="text-decoration:none;""><b>Tagpro</b></a>, and rewatching The Office.
-        </p>
-        <p class="bio w3-text-dark-grey">
-        <br>
-        Engineering thrives on collaboration, so feel free to reach out!
-        </p>
-  </div>
-  <br>
-  <br>
-  <br>
-  <div class="w3-content fade-scroll w3-padding fadein" style="max-width: 750px">
-        <p class="big">In the past, I've been:</p>
-        <p class="bio2 w3-text-dark-grey">
-          • Hardware Engineer Intern for <a href="https://www.sandc.com" target="_blank" style="text-decoration:none;" class="w3-hover-opacity"> <b>S&C Electric Company </b></a>
-          <br>
-          • Electronics Engineer Intern for the <a href="https://www.dmea.osd.mil/home.html" target="_blank" style="text-decoration:none;"> <b class="w3-hover-opacity">US Department of Defense (DMEA)</b></a>
-          <br>
-          • Computer Technician for <a href="http://itexpress.ucdavis.edu/" target="_blank" style="text-decoration:none;"> <b class="w3-hover-opacity">UC Davis - College of Engineering</b></a>
-          <br>
-          • Vice President for <a href="https://www.davisthetatau.com" target="_blank" style="text-decoration:none;"> <b class="w3-hover-opacity">Theta Tau - Professional Engineering Fraternity</b></a>
-          <br>
-          • External Chair for <a href="https://www.davisthetatau.com" target="_blank" style="text-decoration:none;"> <b class="w3-hover-opacity">Theta Tau - Professional Engineering Fraternity</b></a>
-          <br>
-          • Project Contributor for <a href="http://www.ece.ucdavis.edu/ieee/" target="_blank" style="text-decoration:none;"> <b class="w3-hover-opacity">Institute of Electrical and Electronics Engineers (IEEE)</b></a>
-        </p>
-  </div>
-  <br>
-  <br>
-  <br>
-  <div class="w3-content fade-scroll2 w3-padding fadein" style="max-width: 750px">
-    <p class="big w3-center" id="Projects">Projects</p>
-  </div>
-  <div class="w3-content fade-scroll2 w3-padding fadein" style="max-width: 800px">
-    <div class ="w3-container w3-large">
-      <div class="w3-half w3-center w3-padding">
-        <a href="AutonomousVehicle.html" style="text-decoration:none;" class="w3-hover-opacity"><b>Autonomous Vehicle (NATCAR)</b><br><img src="PCBFinal2.jpg" width="500"></a>
+  <body>
+    <header>
+      <div class="navbar-container">
+        <div id="navbar-title" class="navbar-title">
+          <a href="#top">Christian Setiawan</a>
+        </div>
+        <div class="navbar-links-container">
+          <div class="navbar-link">
+            <a href="#skills">Skills</a>
+          </div>
+          <div class="navbar-link">
+            <a href="#experience">Experience</a>
+          </div>
+          <div class="navbar-link">
+            <a href="#projects">Projects</a>
+          </div>
+        </div>
       </div>
-      <div class="w3-half w3-center w3-padding">
-        <a href="GreekBanner.html" style="text-decoration:none;" class="w3-hover-opacity"> <b>Programmable LED Banner</b><br><img src="Banner1.JPG" width="500"></a>
+      <div class="mobile-menu-sticky" id="postiontoggle">
+        <div class="button_container" id="toggle">
+          <span class="top" style="color:rgba(0,0,0,0)">x</span>
+          <span class="middle" style="color:rgba(0,0,0,0)">x</span>
+          <span class="bottom" style="color:rgba(0,0,0,0)">x</span>
+        </div>
       </div>
-    </div>
-    <div class ="w3-container w3-large">
-      <div class="w3-half w3-center w3-padding">
-        <a href="TrafficController.html" style="text-decoration:none;" class="w3-hover-opacity"><b>Verilog FPGA Traffic Controller</b><br><img src="Verilog.png" width="500"></a>
+      <div class="overlay" id="overlay">
+        <nav class="overlay-menu">
+          <ul id="custom-mobile-menu">
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-item-link" href="#top">
+                <span class="mobile-menu-name">About</span>
+              </a>
+            </li>
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-item-link" href="#skills">
+                <span class="mobile-menu-name">Skills</span>
+              </a>
+            </li>
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-item-link" href="#experience">
+                <span class="mobile-menu-name">Experience</span>
+              </a>
+            </li>
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-item-link" href="#projects">
+                <span class="mobile-menu-name">Projects</span>
+              </a>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <div class="w3-half w3-center w3-padding">
-        <a href="MATLAB_Player.html" style="text-decoration:none;" class="w3-hover-opacity"><b>MATLAB Video Processing Player</b><br><img src="MATLAB.png" width="500"></a>
+    </header>
+
+    <div id="main-content">
+      <div id="top"></div>
+      <div class="title-container">
+        <div class="site-header-mask">
+          <h1 class="first">Hi,</h1>
+          <h1 class="second">I'm</h1>
+          <h1 class="third">Christian.</h1>
+        </div>
+        <div class="site-header-mask">
+          <h4>Full Stack Software Engineer.</h4>
+        </div>
       </div>
-    </div>
-</div>
-<br>
-<br>
-<br>
-<br>
-  <div class="w3-content fade-scroll w3-padding fadein" style="max-width: 760px">
-    <p class="big w3-center">Skills</p>
-  </div>
-  <div class="w3-content fadein" style="max-width: 800px">
-    <div class="w3-container w3-center">
-        <div class="w3-third w3-padding">
-          <p class="bio3 w3-text-dark-grey"> <i class="fa fa-code"></i>&nbsp;&nbsp;Programming</p>
-            <div class="w3-large w3-text-dark-grey" style="display: inline-block; text-align: left; line-height: 30px">
-            • C/C++ 
-            <br>
-            • Java
-            <br>
-            • Python
-            <br>
-            • Verilog
-            <br>
-            • HTML
-            <br>
-            • CSS
-            <br>
-            • Assembly
-            <br>
-            • MATLAB
+
+      <div id="about" class="section-container anchor">
+        <div class="my-pic">
+          <img src="/src/images/itme4.jpg" />
+        </div>
+        <div class="about-me-text card">
+          <h1>Hello!</h1>
+          <div class="about-me-bio">
+            <p>
+              I’m a Software Engineer in the San Francisco Bay Area - currently
+              working as a Full Stack Software Engineer at OneValley.
+            </p>
+            <p>
+              I received my B.S. in Electrical Engineering from the University
+              of California, Davis in 2018 with an emphasis on analog/digital
+              circuit design. After several years of hardware and electronics
+              experience, I was introduced to full stack software development
+              and quickly fell in love with building applications.
+            </p>
+            <p>
+              Aside from work, I'm also an avid music lover and have been
+              playing for over 20 years across genres ranging from classical,
+              punk rock, and old school hip-hop. I love deconstructing new music
+              on the drums and the piano - name a song and let's jam!
+            </p>
+            <p>
+              Feel free to reach out at
+              <a href="mailto:setiawan.chr@gmail.com">setiawan.chr@gmail.com</a
+              >!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="skills" class="section-container anchor">
+        <h1>Skills</h1>
+        <div class="skills-container card">
+          <div class="skills-logos">
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-react"></i>
+            <i class="fab fa-vuejs"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <div class="skills-logos">
+            <i class="fab fa-node"></i>
+            <i class="fab fa-sass"></i>
+            <i class="fab fa-npm"></i>
+            <i class="fab fa-aws"></i>
+            <i class="fab fa-confluence"></i>
+          </div>
+        </div>
+      </div>
+
+      <div id="experience" class="section-container anchor">
+        <h1>Experience</h1>
+        <div class="experience-container card">
+          <div class="experience-text">
+            <h5 class="job-title">Full Stack Software Engineer</h5>
+            <div class="company-dates-container">
+              <p class="company-name">OneValley (formerly GSVlabs)</p>
+              <p class="work-dates">January 2020 – Present</p>
             </div>
-        </div>
-        <div class="w3-third w3-padding">
-          <p class="bio3 w3-text-dark-grey"> <i class="fa fa-gear fa-spin"></i>&nbsp;&nbsp;Circuit Design</p>
-          <div class="w3-large w3-text-dark-grey" style="display: inline-block; text-align: left; line-height: 30px">
-          • Altera Quartus
-          <br>
-          • Cadence OrCAD
-          <br>
-          • Eagle PCB Design
-          <br>
-          • ModelSim
-          <br>
-          • PSpice Advanced Analysis
-          <br>
-          • VirtualBench
+            <p>
+              Developed the log in / sign up portal, application form, and
+              judging platform for a global non-profit competition for
+              entrepreneurs and startups, which has handled over 170,000 sign
+              ups, 130,000 submitted applications, and has over 1,000 registered
+              judges spanning across 150 countries.
+            </p>
+            <p>
+              Launched an events platform for virtual competitions (due to
+              COVID-19). Packaged our new events application software as a
+              plugin which has been integrated within all client deployments
+              since our initial events launch.
+            </p>
+          </div>
+          <div class="experience-gifs">
+            <div class="experience-gif">
+              <video
+                class="work-gif"
+                preload="metadata"
+                playsinline="playsinline"
+                webkit-playsinline="webkit-playsinline"
+                loop="loop"
+                muted="muted"
+                autoplay
+              >
+                <source src="/src/videos/EWC_signup_optimized.mp4" />
+              </video>
+            </div>
+            <div class="experience-gif">
+              <video
+                class="work-gif"
+                preload="metadata"
+                playsinline="playsinline"
+                webkit-playsinline="webkit-playsinline"
+                loop="loop"
+                muted="muted"
+                autoplay
+              >
+                <source src="/src/videos/EWC_events_optimized.mp4" />
+              </video>
+            </div>
           </div>
         </div>
-        <div class="w3-third w3-padding">
-          <p class="bio3 w3-text-dark-grey">  <i class="fa fa-wrench"></i>&nbsp;&nbsp;Lab Tools</p>
-          <div class="w3-large w3-text-dark-grey" style="display: inline-block; text-align: left; line-height: 30px">
-          • Breadboard Prototyping
-          <br>
-          • Digital Multimeter
-          <br>
-          • Function Generator
-          <br>
-          • Oscilloscope
-          <br>
-          • Power Supplies
-          <br>
-          • Pulse Generator
-          <br>
-          • Soldering
+        <div class="experience-container card">
+          <div class="experience-text">
+            <h5 class="job-title">Associate Electronic Engineer</h5>
+            <div class="company-dates-container">
+              <p class="company-name">MKS Instruments</p>
+              <p class="work-dates">June 2018 – December 2019</p>
+            </div>
+            <p>
+              Designed, tested, and integrated multi-layer rigid and flex
+              printed circuit boards for R&D lasers, test fixtures, and product
+              redesigns. Developed internal front-end interfaces and scripting
+              to allow remote operation of lab equipment.
+            </p>
+          </div>
+        </div>
+        <div class="experience-container card">
+          <div class="experience-text">
+            <h5 class="job-title">Hardware Engineer (Intern)</h5>
+            <div class="company-dates-container">
+              <p class="company-name">S&C Electric</p>
+              <p class="work-dates">June 2017 – September 2017</p>
+            </div>
+            <p>
+              Developed a front-end application to interface with lab equipment
+              to scan company circuit boards and display related circuit
+              schematics.
+            </p>
+          </div>
+        </div>
+        <div class="experience-container card">
+          <div class="experience-text">
+            <h5 class="job-title">Electronics Engineer (Intern)</h5>
+            <div class="company-dates-container">
+              <p class="company-name">Defense Microelectronics Activity</p>
+              <p class="work-dates">October 2016 – April 2017</p>
+            </div>
+            <p>
+              Manufactured and tested integrated circuit wafers within a
+              semiconductor fabrication lab.
+            </p>
+          </div>
+        </div>
+        <div class="experience-container card">
+          <div class="experience-text">
+            <h5 class="job-title">Engineering IT</h5>
+            <div class="company-dates-container">
+              <p class="company-name">University of California, Davis</p>
+              <p class="work-dates">April 2016 – October 2016</p>
+            </div>
+            <p>
+              Administered technical support to the entire biomedical
+              engineering faculty and graduate student body.
+            </p>
           </div>
         </div>
       </div>
-  </div>
-</div>
-<br>
-<br>
-<br>
-<div class="w3-xlarge w3-center w3-container w3-blue-gray w3-padding-32 fadein">
-  <div class="icons">
-    <a href="mailto:csetiawan@ucdavis.edu">  <i class="fa fa-envelope w3-hover-opacity"></i></a>
-    <a href="Christian Setiawan Electrical Engineer Resume.pdf" target="_blank"> <i class=" fa fa-file w3-hover-opacity"></i></a>
-    <a href="https://www.github.com/chsetiawan" target="_blank"> <i class="fa fa-github w3-hover-opacity" ></i></a>
-    <a href="https://www.linkedin.com/in/christiansetiawan" target="_blank">  <i class="fa fa-linkedin w3-hover-opacity"></i> </a>
-  </div>
-</div>
-</div>
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script type="text/javascript">
-            
-            $(function() {
-                
-                var documentEl = $(document),
-                    fadeElem = $('.fade-scroll');
-                
-                documentEl.on('scroll', function() {
-                    var currScrollPos = documentEl.scrollTop();
-                    
-                    fadeElem.each(function() {
-                        var $this = $(this),
-                            elemOffsetTop = $this.offset().top;
-                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/500);
-                    }); 
-                });
-                
-            });
-</script>
-<script type="text/javascript">
-            
-            $(function() {
-                
-                var documentEl = $(document),
-                    fadeElem = $('.fade-scroll2');
-                
-                documentEl.on('scroll', function() {
-                    var currScrollPos = documentEl.scrollTop();
-                    
-                    fadeElem.each(function() {
-                        var $this = $(this),
-                            elemOffsetTop = $this.offset().top;
-                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/1200);
-                    }); 
-                });
-                
-            });
-</script>
-<script type="text/javascript">
-var theToggle = document.getElementById('toggle');
-// based on Todd Motto functions
-// https://toddmotto.com/labs/reusable-js/
-// hasClass
-function hasClass(elem, className) {
-  return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-}
-// addClass
-function addClass(elem, className) {
-    if (!hasClass(elem, className)) {
-      elem.className += ' ' + className;
-    }
-}
-// removeClass
-function removeClass(elem, className) {
-  var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
-  if (hasClass(elem, className)) {
-        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
-            newClass = newClass.replace(' ' + className + ' ', ' ');
-        }
-        elem.className = newClass.replace(/^\s+|\s+$/g, '');
-    }
-}
-// toggleClass
-function toggleClass(elem, className) {
-  var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
-    if (hasClass(elem, className)) {
-        while (newClass.indexOf(" " + className + " ") >= 0 ) {
-            newClass = newClass.replace( " " + className + " " , " " );
-        }
-        elem.className = newClass.replace(/^\s+|\s+$/g, '');
-    } else {
-        elem.className += ' ' + className;
-    }
-}
-theToggle.onclick = function() {
-   toggleClass(this, 'on');
-   return false;
-}
-</script>
-</body>
+
+      <div id="projects" class="section-container anchor">
+        <h1>Projects</h1>
+        <div class="projects-container">
+          <div class="project card">
+            <h5>Apple Aftermarket</h5>
+            <p>
+              Full stack React application for users to buy and sell aftermarket
+              Apple products. Utilizes Google Firebase for user authentication,
+              GraphQL for database management, and Stripe API to simulate online
+              test payments.
+            </p>
+            <video
+              class="project-vid"
+              preload="metadata"
+              playsinline="playsinline"
+              webkit-playsinline="webkit-playsinline"
+              loop="loop"
+              muted="muted"
+              autoplay
+            >
+              <source src="/src/videos/apple-aftermarket.mp4" />
+            </video>
+          </div>
+          <div class="project card">
+            <h5>Poem Generator</h5>
+            <p>
+              Full stack Vue application for users to create poems (madlibs).
+              Speed challenge to learn and implement the Vue.js framework, set
+              up with a MongoDB database, and develop a MEVN stack application.
+            </p>
+            <video
+              class="project-vid"
+              preload="metadata"
+              playsinline="playsinline"
+              webkit-playsinline="webkit-playsinline"
+              loop="loop"
+              muted="muted"
+              autoplay
+            >
+              <source src="/src/videos/poem-generator.mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="projects-container">
+          <div class="project card">
+            <h5>Virtual Rockstar (In Progress)</h5>
+            <p>
+              Full stack React application for users to play instruments by
+              touch or keyboard. Design plans include ability to record music,
+              integrating Spotify API for in-app music, and Google Firebase for
+              user auth and database.
+            </p>
+            <video
+              class="project-vid"
+              preload="metadata"
+              playsinline="playsinline"
+              webkit-playsinline="webkit-playsinline"
+              loop="loop"
+              muted="muted"
+              autoplay
+            >
+              <source src="/src/videos/music-app.mp4" />
+            </video>
+          </div>
+          <div class="project card">
+            <h5>Home Security</h5>
+            <p>
+              Developed a security system where a microcontroller listens for
+              noise, pings AWS IoT API to display intruder alert information on
+              an OLED screen, and triggers a computer webcam to capture a photo
+              on a web application.
+            </p>
+            <img src="/src/images/home-security.jpg" />
+          </div>
+        </div>
+        <div class="projects-container">
+          <div class="project card">
+            <h5>NATCAR</h5>
+            <p>
+              Self-driving race car. Developed microcontroller software to
+              detect the race track and automate steering. Designed a PID
+              control algorithm to automate speed control based on signals
+              received from a Hall Effect sensor.
+            </p>
+            <video
+              class="project-vid"
+              preload="metadata"
+              playsinline="playsinline"
+              webkit-playsinline="webkit-playsinline"
+              loop="loop"
+              muted="muted"
+              autoplay
+            >
+              <source src="/src/videos/NATCAR.mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="name">© CSETIAWAN 2020</div>
+        <div class="footer-icons">
+          <a href="https://www.linkedin.com/in/christiansetiawan"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="https://www.instagram.com/mu.laneydoodle"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.github.com/chsetiawan"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
