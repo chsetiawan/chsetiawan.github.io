@@ -1,40 +1,42 @@
-console.log('Hi there! Feel free to poke around the source code :) - Christian')
+console.log(
+  "Hi there! Feel free to poke around the source code :) - Christian"
+);
 
 // mobile hamburger
-$('#toggle').click(() => {
-  $('#toggle').toggleClass('active');
-  $('#overlay').toggleClass('open');
-  $('#postiontoggle').toggleClass('unset-fixed');
+$("#toggle").click(() => {
+  $("#toggle").toggleClass("active");
+  $("#overlay").toggleClass("open");
+  $("#postiontoggle").toggleClass("unset-fixed");
 });
 
-$('.mobile-menu-name').click(() => {
-  $('#toggle').toggleClass('active');
-  $('#overlay').toggleClass('open');
-  $('#postiontoggle').toggleClass('unset-fixed');
-})
+$(".mobile-menu-name").click(() => {
+  $("#toggle").toggleClass("active");
+  $("#overlay").toggleClass("open");
+  $("#postiontoggle").toggleClass("unset-fixed");
+});
 
-
+// NAVBAR TITLE SCROLLING
 
 var didScroll;
-// on scroll, let the interval function know the user has scrolled
-$(window).scroll(function(event){
+
+$(window).scroll((event) => {
   didScroll = true;
 });
-// run hasScrolled() and reset didScroll status
-setInterval(function() {
+
+setInterval(() => {
   if (didScroll) {
-    // console.log('scrolled');
     hasScrolled();
     didScroll = false;
   }
 }, 250);
-function hasScrolled() {
+
+const hasScrolled = () => {
   // do stuff here...
-  if (window.scrollY > 400) {
-    console.log("past 500")
-    if ($('#navbar-title').hasClass('visibility-hidden')) {
-      $('#navbar-title').removeClass('visibility-hidden');
-      $('#navbar-title').addClass('second');
-    }
+  if (
+    window.scrollY > 400 &&
+    $("#navbar-title").hasClass("visibility-hidden")
+  ) {
+    $("#navbar-title").removeClass("visibility-hidden");
+    $("#navbar-title").addClass("second");
   }
-}
+};
